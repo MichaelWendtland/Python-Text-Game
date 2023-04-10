@@ -1,0 +1,22 @@
+class geashesMonster:
+    def __init__(self, name, health, attack_damage):
+        self.name = name
+        self.health = health
+        self.attack_damage = attack_damage
+        
+    def attack(self):
+        print(f"The {self.name} attacks for {self.attack_damage} damage!")
+        
+    def take_damage(self, damage):
+        self.health -= damage
+        if self.health <= 0:
+            print(f"{self.name} has been defeated!")
+        else:
+            print(f"The {self.name} has {self.health} health remaining.")
+#this is the monster, it has a health of 20 and a attack dammage of 10
+geashes = geashesMonster ("Geashes", 20, 10)
+#use .attack to call on the monster to attack
+geashes.attack()
+#this line is for telling how much dammage was given by the player, use this as an example
+geashes.take_damage(19)
+geashes.take_damage(1)
