@@ -1,0 +1,146 @@
+﻿
+Story Line:
+
+
+“You wake up…. You're confused, the sounds of sirens fill your ears. It is dim with only the emergency lights dimly shining. You get up and yell for help to no avail, it seems like you're the only one left on this ship.”
+
+
+“You get to your feet and decided to look around to try and find help”
+
+
+* This is where the player will first walk around the ship to find the flight deck to communicate with the mother ship   -
+
+
+“You reach the Flight decks Communication computer, however it is out of service due to the power back up failing, you'll need to get to the engine room and repair the generator”
+
+
+* When the player reaches the engine room he will discover that he will need to find replacement wire on the ship inorder to get the power back on  -
+
+
+“You walk around the ship looking for wire where you stumble upon the captain's log”
+
+
+“The last entry was 72 hours ago… it reads, “this is where my log ends it seems that all hope is lost, our only hope is that the mothership received out SOS signal but it seems like our luck has run out”” 
+
+
+“If anyone is reading this watch out for geashes they are extremely intelligent!”
+
+
+“You find this hard to understand, you have no prior memory of being on this ship or even why you ended up here”
+
+
+“You continue the read, “after geashes destroyed the terminal I had to store our repair equipment in the master chamber with the rest of the crew to prevent him from destroying it, if anyone from the outside is reading this PLEASE SAVE US! YOU'RE NOT ALONE!” 
+
+
+“The code to save us can be found in the storage closet, please move with haste as we won't have much time!”
+
+
+“You put the log in your pocket and make your way to the storage closet”
+
+
+- The player then has to make there way to the storage closet   -
+
+
+* Once at the storage closet the player can find some copper wire to fix the generator along with a note with an 8 digit code   -
+
+
+* The player then must make their way back to the generator to use the copper wire to get the power back on to continue the story   -
+
+
+* Once the power is back on the player will start to notice that he is not alone and that geashes is roaming the ship   -
+“You get the power back on and instantly the dimly lit ship is bright with the light of LED lights shining.”
+
+
+“You leave the generator room to get to the Master Chamber like the captain's log said”
+
+
+“As you make your way down the halls you notice strange noises coming from the living quarters and decide to investigate, after all maybe it's another crew mate.”
+
+
+* The player then enters the living quarters and discovers geashes   -
+
+
+“In shock you realise that this wasn't a crewmate but rather geashes that the captain warned about, luckly you seemed to have spooked it as it quickly ran up the wall and crawled through a vent in the ceiling, at least now you know you're not alone…”
+
+
+* The player can then go all the way to the Master Chamber to enter the 8 digit code that was left on the note -
+
+
+“You finally have made it to the master chamber, you look at the crumpled up note with the 8 digit code on it and type it into the door security panel 8-5-2-9-0-1-8-4, however it reads ACCESS DENIED, you try again but backwards 4-8-1-0-9-2-5-8 this time the panel reads ACCESS GRANTED and you hear a door latch open.”
+
+
+“You open the door to your horror, the entire 6 man crew is not there, the only thing left of them is their bones…”
+
+
+“You look around the room and discover another note…”
+
+
+“It reads, this is my final message, geashes has breached containment and the onlything that can prevent it from killing all of us is if we use the HiMagNetic7000, its the only weapon that geashes is vulnerable to and unfortunately mine has ran out of power since geashes has destoryed the generator” 
+
+
+“You look back to where you found the note to see a gun shaped object that is glowing with a light blue aurora on its side It reads, “HiMagNetic7000”, it seems that turning on the generator has made the weapon function again, you pick it up and carry it with you. You think to yourself that this HiMagNetic7000 will be very useful”
+
+
+“You also find a backpack and decided to bring that with you, at least then you will have space for all this stuff”
+
+
+“You put on the backpack and leave the master chamber, you think to yourself that now is the best time to get back to the flight deck to get in contact with the mothership”
+
+
+* The player then leaves the room and starts to head back to the flight deck   -
+
+
+* The player cant go the flight deck without passing through other rooms, one of these rooms will contain a geashes  here the player will have to battle it, the player will need to use there HiMagNetic7000 in order to kill the first enemy however it is also here where the player will find out that there are more than 1 roaming the ship   -
+
+
+“You enter the cafeteria on your way to the flight deck”
+
+
+As you walk through you see a geashes come running out of the flight deck and quickly it charges you!”
+
+
+* This is when the fight scene will start, in this the player will have to use the HiMagNetic7000 to kill the enemy   -
+
+
+“You subdue geashes and think to yourself that it seemed to easy, just after this though geashes screeaches before it finaily croaks and you realise that it was calling for backup, you quickly run into the flight deck”
+
+
+“To you utter dismay you rush into the flight deck to see that the panel that was once intact was now missing much of its parts and computer components”
+
+
+“You remember that there are replacement parts in the storage room so you decided to head over to get parts to fix the panel”
+
+
+-the player then has to go to the storage room and collect the parts needed for the panel-
+
+
+-along the way the player must fight another alien with the HiMagNetic7000-
+
+
+-the player can not go straight to the storage room through the hallway connecting the cafeteria and the living quarters, there is an undefeatable enemy in that hallway, instead the player must go through the master chamber then the living quarters to survive-
+
+
+* When the player makes to the storage room this text plays-
+“You make it to the storage room and rummage around, finally you find the transmitter module, you stuff it in your backpack and start to make your way back to the flight deck”
+
+
+-on the way back the player will have to fight 2 other aliens but the player will then make it back to the flight deck and fix the transmitter by swapping them-
+
+
+“You slide the transmitter in and the panel spurs to life, quickly you hit the SOS button and the signal is sent out”
+
+
+“Before you can celebrate you hear a russell and notice that there is another alien standing behind you”
+
+
+“Quickly you grab your HiMagNetic7000”
+
+
+-fight scene then starts and the player must defeat the alien in a time based fight-
+
+
+The player then defeats the alien
+
+
+This starts the final battle where enemies come in waves for 3-5 mins until the motherships arrives, perhaps a timer that counts to zero can be implemented
+
