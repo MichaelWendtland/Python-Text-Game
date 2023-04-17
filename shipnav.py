@@ -16,7 +16,7 @@ class Spaceship:
         self.rooms["Living Quarters"].doors["east"] = "Storage"
         self.rooms["Living Quarters"].doors["north"] = "Cafeteria"
         self.rooms["Living Quarters"].doors["south"] = "Generator Room"
-        self.rooms["Master Chamber"].doors["East"] = "Cafeteria"
+        self.rooms["Master Chamber"].doors["east"] = "Cafeteria"
         self.rooms["Generator Room"].doors["north"] = "Living Quarters"
         self.rooms["Storage"].doors["west"] = "Living Quarters"
 
