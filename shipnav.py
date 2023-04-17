@@ -46,4 +46,4 @@ while True:
     direction = input("Enter direction or 'exit' to quit: ").lower()
     if direction == "exit":
         break
-    spaceship.navigate(direction)
+    spaceship.navigate(direction) 
