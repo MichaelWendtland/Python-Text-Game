@@ -66,7 +66,7 @@ class geashesMonster:
 #Init player as p
 class Spaceship:
     def __init__(self):
-        self.current_room = "Flight Deck"
+        self.current_room = "Living Quarters"
         self.rooms = {
             "Flight Deck": Room("Flight Deck", "You are on the flight deck."),
             "Generator Room": Room("Generator Room", "You are in the generator room."),
