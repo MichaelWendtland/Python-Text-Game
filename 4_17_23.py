@@ -118,7 +118,7 @@ def intro():
     print(spaceship.rooms[spaceship.current_room].description)
     while True:
         if spaceship.current_room == "Flight Deck":
-            print("TEST Flight Deck OK")
+            pass
 
         if spaceship.current_room == "Cafeteria":
             def cafeteria_room():
@@ -130,7 +130,7 @@ def intro():
             print("You look around and see that there are no crew mates in here, however you have the feeling that your being watched")
     
         if spaceship.current_room == "Master Chamber":
-            print("TEST Master Chamber OK")
+            pass
     
         if spaceship.current_room == "Generator Room":
             time.sleep(3)
