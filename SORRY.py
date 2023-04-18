@@ -111,23 +111,27 @@ class Room:
         self.doors = {"north": None, "south": None, "east": None, "west": None}
         
 def Fuse():
-    if p.caplog == True:
+    if p.fuse == False:
+        time.sleep(1)
+        print("\nThere is a shelf in here with various items on it. \n")
+        time.sleep(1)
+        print("You decide to search the shelves.\n")
         x = input("Search Options: top, middle, or bottom shelf?: ")
+        time.sleep(1)
         if x == "bottom":
             p.fuse = True
-            print("You have acquired the Fuse")
-            p.lights = True
-            pass
-        if x == "middle":
-            print("Some find screws and a box of trash bags, but nothing useful here.")
+            print("\nYou have acquired the Fuse!")
+        elif x == "middle":
+            print("\nSome find screws and a box of trash bags, but nothing useful here.")
             Fuse()
-        if x == "top":
-            print("You found nothing but a dusty shelf")
+        elif x == "top":
+            print("\nYou found nothing but a dusty shelf")
             Fuse()
-        if None:
-            print("Invalid input, please enter top, middle, or bottom.")
+        else:
+            print("\nInvalid input, please enter top, middle, or bottom.")
             Fuse()
         pass
+
 #Init player as p
 p = player()
 spaceship = Spaceship()
@@ -149,6 +153,8 @@ def intro():
             pass
 
         if spaceship.current_room == "Cafeteria":
+            if p.lights == True:
+                p.caplog = True
             #if p.weapon == False:
                 #pass
             #if p.weapon == True:
@@ -168,20 +174,20 @@ def intro():
         if spaceship.current_room == "Generator Room":
             
             if p.fuse == False:
-                p.caplog = True
-                print("You have found the captain's log")
+                print("\nThe fuse panel seems to be located in this room, but there is a broken fuse.\n")
+                print("Luckily you remember there are extra's stored in the storage room.\n")
                 pass
             if p.fuse == True:
-                print("As you walk into the generator room you find the Fuse panel and place the fuse you found inside the slot.\n")
-                print("You flip the switch to the on position and suddenly the lights turn on and you decied to look for your crew mates")
+                print("\nAs you walk into the generator room you find the Fuse panel and place the fuse you found inside the slot.\n")
+                print("You flip the switch to the on position and suddenly the lights turn on and you decied to look for your crew mates\n")
                 p.lights = True
                 pass
             pass
     
         if spaceship.current_room == "Storage":
-            if p.caplog == True and p.fuse == False:
+            if p.fuse == False:
                 Fuse()
-            if p.caplog == False:
+            if p.fuse == True:
                 pass
             pass
 
