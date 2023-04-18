@@ -98,7 +98,7 @@ class Spaceship:
     def available_directions(self):
         directions = [direction for direction, room in self.rooms[self.current_room].doors.items() if room is not None]
         return f"You can go: {', '.join(directions)}"
-he
+
 class Room:
     def __init__(self, name, description):
         self.name = name
