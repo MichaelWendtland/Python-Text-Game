@@ -5,7 +5,7 @@ Story Line:
 “You wake up…. You're confused, the sounds of sirens fill your ears. It is dim with only the emergency lights dimly shining. You get up and yell for help to no avail, it seems like you're the only one left on this ship.”
 
 
-“You get to your feet and decided to look around to try and find help”
+“You get to your feet and decided to look around to try and find help, first you need to restore power in the generator room.”
 
 
 * This is where the player will first walk around the ship to find the flight deck to communicate with the mother ship   -
