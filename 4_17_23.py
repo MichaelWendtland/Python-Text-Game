@@ -66,7 +66,7 @@ class geashesMonster:
 #Init player as p
 class Spaceship:
     def __init__(self):
-        self.current_room = "Living Quarters"
+        self.current_room = "Generator Room"
         self.rooms = {
             "Flight Deck": Room("Flight Deck", "You are on the flight deck."),
             "Generator Room": Room("Generator Room", "You are in the generator room."),
@@ -110,7 +110,7 @@ def intro():
     p.name = input("What is your character's name? ")
     print('\n', "Welcome to the game" , p.name , '\n')
     print(line[5], '\n')
-    time.sleep(3)
+    time.sleep(4)
     print(line[8])
     time.sleep(4)
     spaceship = Spaceship()
@@ -123,16 +123,19 @@ def intro():
             print("TEST Cafeteria OK")
     
         if spaceship.current_room == "Living Quarters":
-            print("TEST Living Quarters OK")
+            time.sleep(3)
+            print("You look around and see that there are no crew mates in here, however you have the feeling that your being watched")
     
         if spaceship.current_room == "Master Chamber":
             print("TEST Master Chamber OK")
     
         if spaceship.current_room == "Generator Room":
-            print("TEST Generator Room OK")
+            time.sleep(3)
+            print("you walk over to the generator and see that the main power switch was flipped off, you flip the switch to the on position and suddenly the lights turn on and you decied to look for your crew mates")
     
         if spaceship.current_room == "Storage":
-            print("TEST Storage OK")
+            time.sleep(3)
+            print("you walk into the storage room and see boxes of material, you dont need any of this right now however.")
     
         print(spaceship.available_directions())
         direction = input("Enter direction or 'exit' to quit: ").lower()
