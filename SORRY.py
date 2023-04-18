@@ -117,6 +117,7 @@ def Fuse():
             p.fuse = True
             print("You have acquired the Fuse")
             p.lights = True
+            pass
         if x == "middle":
             print("Some find screws and a box of trash bags, but nothing useful here.")
             Fuse()
