@@ -124,7 +124,7 @@ def Fuse():
         if x == "top":
             print("You found nothing but a dusty shelf")
             Fuse()
-        else:
+        if None:
             print("Invalid input, please enter top, middle, or bottom.")
             Fuse()
         pass
