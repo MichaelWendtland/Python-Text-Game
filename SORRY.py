@@ -72,7 +72,7 @@ class geashesMonster:
 
 class Spaceship:
     def __init__(self):
-        self.current_room = "Generator Room"
+        self.current_room = "Flight Deck"
         self.rooms = {
             "Flight Deck": Room("Flight Deck", "You are on the flight deck."),
             "Generator Room": Room("Generator Room", "You are in the generator room."),
@@ -111,27 +111,22 @@ class Room:
         self.doors = {"north": None, "south": None, "east": None, "west": None}
         
 def Fuse():
-    if p.fuse == False:
-        time.sleep(1)
-        print("\nThere is a shelf in here with various items on it. \n")
-        time.sleep(1)
-        print("You decide to search the shelves.\n")
+    if p.caplog == True:
         x = input("Search Options: top, middle, or bottom shelf?: ")
-        time.sleep(1)
         if x == "bottom":
             p.fuse = True
-            print("\nYou have acquired the Fuse!\n")
-        elif x == "middle":
-            print("\nSome find screws and a box of trash bags, but nothing useful here.")
+            print("You have acquired the Fuse")
+            p.lights = True
+        if x == "middle":
+            print("Some find screws and a box of trash bags, but nothing useful here.")
             Fuse()
-        elif x == "top":
-            print("\nYou found nothing but a dusty shelf")
+        if x == "top":
+            print("You found nothing but a dusty shelf")
             Fuse()
         else:
-            print("\nInvalid input, please enter top, middle, or bottom.")
+            print("Invalid input, please enter top, middle, or bottom.")
             Fuse()
         pass
-
 #Init player as p
 p = player()
 spaceship = Spaceship()
@@ -153,12 +148,10 @@ def intro():
             pass
 
         if spaceship.current_room == "Cafeteria":
-            if p.lights == True:
-                p.caplog = True
-                time.sleep(1)
-                print("\nAs you enter the Cafeteria, assisted by the newly brightened room, you discover a book laying on the table.")
-                time.sleep(1)
-                print('\nYou pick up the book, reading the words written on the cover "Captains log"')
+            #if p.weapon == False:
+                #pass
+            #if p.weapon == True:
+            
             pass
     
         if spaceship.current_room == "Living Quarters":
@@ -167,33 +160,27 @@ def intro():
             pass
     
         if spaceship.current_room == "Master Chamber":
-            #if p.lights == True:
-            #if p.lights == False:
-                #pass
+            #if spaceship lights = true
+            #if spaceship lights = false
             pass
     
         if spaceship.current_room == "Generator Room":
             
             if p.fuse == False:
-                print("\nThe fuse panel seems to be located in this room, but there is a broken fuse.\n")
-                print("Luckily you remember there are extra's stored in the storage room.\n")
+                p.caplog = True
+                print("You have found the captain's log")
                 pass
             if p.fuse == True:
+                print("As you walk into the generator room you find the Fuse panel and place the fuse you found inside the slot.\n")
+                print("You flip the switch to the on position and suddenly the lights turn on and you decied to look for your crew mates")
                 p.lights = True
-                print("\nAs you walk into the generator room you find the Fuse panel and place the fuse you found inside the slot.\n")
-                time.sleep(1)
-                print("You fumble around and find the main power switch. With a bit of effort, you are able to flip the switch.\n")
-                time.sleep(1)
-                print("You get the power back on and instantly the dimly lit ship is bright with the light of LED lights shining.\n")
-                time.sleep(1)
-                print("It may be a good time to get familiar with the ship.\n")
                 pass
             pass
     
         if spaceship.current_room == "Storage":
-            if p.fuse == False:
+            if p.caplog == True and p.fuse == False:
                 Fuse()
-            if p.fuse == True:
+            if p.caplog == False:
                 pass
             pass
 
