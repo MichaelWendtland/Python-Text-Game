@@ -73,7 +73,7 @@ class Spaceship:
             "Storage": Room("Storage", "You are in the storage room."),
             "Cafeteria": Room("Cafeteria", "You are in the cafeteria."),
             "Master Chamber": Room("Master Chamber", "You have entered the master chamber"),
-            "Living Quarters": Room("Living Quarters","This is where you and your crew slept.")
+            "Living Quarters": Room("Living Quarters","You are in the Living Quarters This is where you and your crew slept.")
         }
         self.rooms["Flight Deck"].doors["south"] = "Cafeteria"
         self.rooms["Cafeteria"].doors["south"] = "Living Quarters"
@@ -109,6 +109,10 @@ directions = 'This line will show directions'
 def intro():
     p.name = input("What is your character's name? ")
     print('\n', "Welcome to the game" , p.name , '\n')
+    print(line[5], '\n')
+    time.sleep(3)
+    print(line[8])
+    time.sleep(4)
     spaceship = Spaceship()
     print(spaceship.rooms[spaceship.current_room].description)
     while True:
