@@ -72,7 +72,7 @@ class geashesMonster:
 
 class Spaceship:
     def __init__(self):
-        self.current_room = "Flight Deck"
+        self.current_room = "Generator Room"
         self.rooms = {
             "Flight Deck": Room("Flight Deck", "You are on the flight deck."),
             "Generator Room": Room("Generator Room", "You are in the generator room."),
@@ -120,7 +120,7 @@ def Fuse():
         time.sleep(1)
         if x == "bottom":
             p.fuse = True
-            print("\nYou have acquired the Fuse!")
+            print("\nYou have acquired the Fuse!\n")
         elif x == "middle":
             print("\nSome find screws and a box of trash bags, but nothing useful here.")
             Fuse()
@@ -155,10 +155,10 @@ def intro():
         if spaceship.current_room == "Cafeteria":
             if p.lights == True:
                 p.caplog = True
-            #if p.weapon == False:
-                #pass
-            #if p.weapon == True:
-            
+                time.sleep(1)
+                print("\nAs you enter the Cafeteria, assisted by the newly brightened room, you discover a book laying on the table.")
+                time.sleep(1)
+                print('\nYou pick up the book, reading the words written on the cover "Captains log"')
             pass
     
         if spaceship.current_room == "Living Quarters":
@@ -167,8 +167,9 @@ def intro():
             pass
     
         if spaceship.current_room == "Master Chamber":
-            #if spaceship lights = true
-            #if spaceship lights = false
+            #if p.lights == True:
+            #if p.lights == False:
+                #pass
             pass
     
         if spaceship.current_room == "Generator Room":
@@ -178,9 +179,14 @@ def intro():
                 print("Luckily you remember there are extra's stored in the storage room.\n")
                 pass
             if p.fuse == True:
-                print("\nAs you walk into the generator room you find the Fuse panel and place the fuse you found inside the slot.\n")
-                print("You flip the switch to the on position and suddenly the lights turn on and you decied to look for your crew mates\n")
                 p.lights = True
+                print("\nAs you walk into the generator room you find the Fuse panel and place the fuse you found inside the slot.\n")
+                time.sleep(1)
+                print("You fumble around and find the main power switch. With a bit of effort, you are able to flip the switch.\n")
+                time.sleep(1)
+                print("You get the power back on and instantly the dimly lit ship is bright with the light of LED lights shining.\n")
+                time.sleep(1)
+                print("It may be a good time to get familiar with the ship.\n")
                 pass
             pass
     
