@@ -1,5 +1,6 @@
 #import time module
 import time
+from PlayerClass import playerCharacter
 #Open storyline files and init function line to read the story
 with open('story.txt','r', encoding = "utf8") as s:
     a = s.readlines()
@@ -120,7 +121,9 @@ def intro():
             print("TEST Flight Deck OK")
 
         if spaceship.current_room == "Cafeteria":
-            print("TEST Cafeteria OK")
+            def cafeteria_room():
+                print("You enter the cafeteria and see a captain's log on the table.")
+                player.add_to_inventory("captain's log")
     
         if spaceship.current_room == "Living Quarters":
             time.sleep(3)
