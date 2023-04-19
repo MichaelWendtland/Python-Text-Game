@@ -222,24 +222,29 @@ def driver():
             if p.code == True:
                 time.sleep(2)
                 print("\nYou finally have made it to the master chamber, you look at the crumpled up note with the 8 digit code on it.\n")
-                time.sleep(1)
+                time.sleep(2)
                 print("The numbers on the paper read: 85290184\n")
                 time.sleep(2)
                 print("You type the code into the door security panel, 8-5-2-9-0-1-8-4.\n")
-                time.sleep(1)
+                time.sleep(2)
                 print("The screen reads out --ACCESS DENIED--.\n")
-                time.sleep(1)
+                time.sleep(2)
                 print("You decide to try again, but backwards 4-8-1-0-9-2-5-8.\n\n This time the panel reads --ACCESS GRANTED-- and you hear a door latch open.\n")
                 time.sleep(3)
                 print("You open the door. To your horror, the entire 6 man crew is not there... the only thing left of them is their bones…\n")
                 time.sleep(2)
                 print("As you look around the room, you discover another note.\n")
                 time.sleep(2)
-                print("YOU FIND DA WEAPON")
+                print('It reads, "This is my final message,"\n\n "The Geashes has breached containment and the onlything that can prevent it from killing all of us is if we use the HiMagNetic7000." \n\n "Its the only weapon that geashes is vulnerable to and unfortunately mine has ran out of power since geashes has destroyed the generator"')
+                time.sleep(4)
+                print("You look back to where you found the note to see a gun shaped object that is glowing with a light blue aurora on its side.\n")
+                time.sleep(3)
+                print("It reads, “HiMagNetic7000”, it seems that turning on the generator has made the weapon function again.\n\n You pick it up and carry it with you. You think to yourself that this HiMagNetic7000 will be very useful.\n")
+                time.sleep(4)
+                print('As you turn to leave the master chamber, you think to yourself:\n\n "Now is the best time to get back to the flight deck to get in contact with the mothership"\n')
                 p.weapon = True
-
-            #if p.lights == False:
-                #pass
+            elif p.weapon == True:
+                pass
             pass
 
         #This is where the player starts the game and where the fuse will be returned to
