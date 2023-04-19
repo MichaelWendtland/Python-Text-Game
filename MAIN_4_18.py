@@ -26,7 +26,7 @@ class player:
         self.health = 100
         self.health_max = 100
         self.attack_damage = 10
-        self.inventory = ""
+        self.cpu
         self.weapon = False
         self.caplog = False
         self.fuse = False
@@ -143,8 +143,12 @@ def Fuse():
         print("\nSome find screws and a box of trash bags, but nothing useful here.\n")
         Fuse()
     elif x == "top":
-        print("\nYou found nothing but a dusty shelf\n")
-        Fuse()
+        if p.weapon == True:
+            print("\n You have found the CPU!\n ")
+            pass
+        elif p.weapon == False:
+            print("\nYou found nothing but a dusty shelf, and some sort of computer part.\n")
+            Fuse()
     else:
         print("\nInvalid input, please enter top, middle, or bottom.\n")
         Fuse()
@@ -173,7 +177,10 @@ def driver():
         #Locate the room, and depending on the p.*args: play coresponding dialog/functions
         if spaceship.current_room == "Flight Deck":
             #if p.weapon == False:
-            #if p.weapon == True:
+            if p.cpu == True:
+                print("\nFLIGHT CONTROLS NOW ACTIVE\n")
+                time.sleep(2)
+                print("THIS THE MOTHERSHIP, WE ARE COMING IN HOT BABY! \n\n WATCH UR TAIL! THE GEASHES ARE MEANY HEADS\n")
             pass
 
         if spaceship.current_room == "Cafeteria":
@@ -287,7 +294,9 @@ def driver():
         #This is where the player finds the fuse and the code (Includes simple shelf search function Fuse())
         if spaceship.current_room == "Storage":
             #If the code has already been found skip dialog
-            if p.code == True:
+            if p.weapon == True:
+                Fuse()
+            elif p.code == True:
                 pass
             #If the player has not found the fuse, start Fuse() to search shelves (dialog = fuse)
             elif p.fuse == False:
