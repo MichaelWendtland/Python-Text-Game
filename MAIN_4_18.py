@@ -205,6 +205,15 @@ def driver():
                 print('"If anyone from the outside is reading this PLEASE SAVE US! YOURE NOT ALONE!"\n')
                 time.sleep(4)
                 print('“The code to save us can be found in the storage closet, please move with haste as we wont have much time!”\n')
+            elif p.weapon == True:
+                geashes = geashesMonster ("Geashes", 10, 10)
+                print("Geashes appears infront of you!")
+                print("options: Use HiMagNetic7000")
+                userinput = input("Type HiMagNetic7000")
+                if userinput == "HiMagNetic7000":
+                    print("You use your HiMagNetic7000 and deal 10 dammage")
+                    geashes.take_damage(10)
+
             pass
 
         #This is where the player first encounters the Geashes after receiving the code
