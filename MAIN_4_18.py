@@ -1,18 +1,17 @@
 #import time module
 import time
 #Open storyline files and init function line to read the story
-with open('story.txt','r', encoding = "utf8") as s:
-    a = s.readlines()
-    i = 1
-    line = {}
-    for x in a:
-        x = x.rstrip('\n')
-        x = x.rstrip('')
-        line[i] = x
-        i += 1
+#with open('story.txt','r', encoding = "utf8") as s:
+#    a = s.readlines()
+#    i = 1
+#    line = {}
+#    for x in a:
+#        x = x.rstrip('\n')
+#        x = x.rstrip('')
+#        line[i] = x
+#        i += 1
     
-
-
+#This function is to print game over
 def go():
     print(" _____   ___  ___  ___ _____   _____  _   _ ___________ \n"
             "|  __ \ / _ \ |  \/  ||  ___| |  _  || | | |  ___| ___ \ \n"
@@ -20,7 +19,7 @@ def go():
             "| | __ |  _  || |\/| ||  __|  | | | || | | |  __||    / \n"
             "| |_\ \| | | || |  | || |___  \ \_/ /\ \_/ / |___| |\ \ \n"
             " \____/\_| |_/\_|  |_/\____/   \___/  \___/\____/\_| \_|\n")
-#Init player spawn with no name, 100 health/100, empty inventory, no weapon
+#Init player spawn with no name, 100 health/100, empty inventory, no weapon, all items=false
 class player:
     def __init__(self):
         self.name = ""
@@ -45,7 +44,8 @@ class player:
             go()
         else:
             print(f"{self.name} has {self.health} remaining")
-            
+
+#The class for geashesMonster establishes name, health, attack damage; as well as attack and take_damage       
 class geashesMonster:
     def __init__(self, name, health, attack_damage):
         self.name = name
@@ -70,7 +70,7 @@ class geashesMonster:
 # geashes.take_damage(19)
 # geashes.take_damage(1)
 
-
+#Spaceship class-Identifies each room and provides a description of each room to be read to the player upon entry
 class Spaceship:
     def __init__(self):
         self.current_room = "Generator Room"
@@ -105,13 +105,14 @@ class Spaceship:
         directions = [direction for direction, room in self.rooms[self.current_room].doors.items() if room is not None]
         return f"You can go: {', '.join(directions)}"
 
+#This is the class for room
 class Room:
     def __init__(self, name, description):
         self.name = name
         self.description = description
         self.doors = {"north": None, "south": None, "east": None, "west": None}
 
-
+#This function is the simple shelf program to search for the fuse and the code
 def Fuse():
     x = input("Search Options: top, middle, or bottom shelf?: ").lower()
     time.sleep(1)
