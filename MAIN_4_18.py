@@ -205,24 +205,43 @@ def driver():
                 time.sleep(4)
                 print('“The code to save us can be found in the storage closet, please move with haste as we wont have much time!”\n')
             pass
+
         #This is where the player first encounters the Geashes after receiving the code
         if spaceship.current_room == "Living Quarters":
             if p.scare == True:
                 time.sleep(3)
                 print("\nAs you enter the Living Quarters, you realise that wasn't a crewmate, but rather the geashes that the captain warned about!\n")
                 time.sleep(2)
-                print("The geashes staggers back and climbs up the wall and into the open vent in the ceiling.")
+                print("The geashes staggers back and climbs up the wall and into the open vent in the ceiling.\n")
                 p.scare = False
 
             pass
+
         #This is where the player enters the code and receives the HiMagNetic7000
         if spaceship.current_room == "Master Chamber":
             if p.code == True:
-                print("FIND DA WEAPON")
+                time.sleep(2)
+                print("\nYou finally have made it to the master chamber, you look at the crumpled up note with the 8 digit code on it.\n")
+                time.sleep(1)
+                print("The numbers on the paper read: 85290184\n")
+                time.sleep(2)
+                print("You type the code into the door security panel, 8-5-2-9-0-1-8-4.\n")
+                time.sleep(1)
+                print("The screen reads out --ACCESS DENIED--.\n")
+                time.sleep(1)
+                print("You decide to try again, but backwards 4-8-1-0-9-2-5-8.\n\n This time the panel reads --ACCESS GRANTED-- and you hear a door latch open.\n")
+                time.sleep(3)
+                print("You open the door. To your horror, the entire 6 man crew is not there... the only thing left of them is their bones…\n")
+                time.sleep(2)
+                print("As you look around the room, you discover another note.\n")
+                time.sleep(2)
+                print("YOU FIND DA WEAPON")
+                p.weapon = True
 
             #if p.lights == False:
                 #pass
             pass
+
         #This is where the player starts the game and where the fuse will be returned to
         if spaceship.current_room == "Generator Room":
             if p.lights ==True:
@@ -248,6 +267,7 @@ def driver():
                 print("It may be a good time to get familiar with the ship.\n")
                 pass
             pass
+
         #This is where the player finds the fuse and the code (Includes simple shelf search function Fuse())
         if spaceship.current_room == "Storage":
             #If the code has already been found skip dialog
