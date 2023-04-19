@@ -148,7 +148,7 @@ def Fuse():
 #Init player as p
 p = player()
 spaceship = Spaceship()
-def intro():
+def driver():
     p.name = input("What is your character's name? ")
     print('\n', "Welcome to the game" , p.name , '\n')
     print(spaceship.rooms[spaceship.current_room].description)
@@ -195,7 +195,7 @@ def intro():
         if spaceship.current_room == "Living Quarters":
             if p.code == True:
                 time.sleep(3)
-                print("GEASHES!!\n")
+                print("\nGEASHES!!\n")
             pass
     
         if spaceship.current_room == "Master Chamber":
@@ -228,13 +228,15 @@ def intro():
             pass
     
         if spaceship.current_room == "Storage":
-            if p.fuse == False:
+            if p.code == True:
+                pass
+            elif p.fuse == False:
                 time.sleep(1)
-                print("\nThere is a shelf in here with various items on it. \n")
+                print("\nThere are shelves in here that contain various items. \n")
                 time.sleep(1)
                 print("You decide to search the shelves.\n")
                 Fuse()
-            if p.caplog == True:
+            elif p.caplog == True:
                 print("\nYou could have sworn you checked all the shelves...\n")
                 Fuse()
 
@@ -274,7 +276,7 @@ def main_menu():
 def start_game():
     print("Starting new game...")
     print("Game started!")
-    intro()
+    driver()
     #main_menu()
 
 def load_game():
