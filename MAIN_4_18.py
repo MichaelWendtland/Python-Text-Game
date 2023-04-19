@@ -26,7 +26,7 @@ class player:
         self.health = 100
         self.health_max = 100
         self.attack_damage = 10
-        self.cpu
+        self.cpu = False
         self.weapon = False
         self.caplog = False
         self.fuse = False
