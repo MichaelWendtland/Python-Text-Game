@@ -25,7 +25,7 @@ class player:
         self.name = ""
         self.health = 100
         self.health_max = 100
-        self.attack_damage = 0
+        self.attack_damage = 10
         self.inventory = ""
         self.weapon = False
         self.caplog = False
@@ -53,6 +53,7 @@ class geashesMonster:
         self.name = name
         self.health = health
         self.attack_damage = attack_damage
+
         
     def attack(self):
         print(f"The {self.name} attacks for {self.attack_damage} damage!")
@@ -65,12 +66,12 @@ class geashesMonster:
             print(f"The {self.name} has {self.health} health remaining.")
 
 #this is the monster, it has a health of 20 and a attack dammage of 10
-#geashes = geashesMonster ("Geashes", 20, 10)
+       # geashes = geashesMonster ("Geashes", 20, 10)
 #use .attack to call on the monster to attack
-#geashes.attack()
+       # geashes.attack()
 # #this line is for telling how much dammage was given by the player, use this as an example
-# geashes.take_damage(19)
-# geashes.take_damage(1)
+        #geashes.take_damage(19)
+        #geashes.take_damage(1)
 
 #Spaceship class-Identifies each room and provides a description of each room to be read to the player upon entry
 class Spaceship:
