@@ -32,8 +32,10 @@ class player:
         self.fuse = False
         self.lights = False
         self.code = False
+        self.scare = False
     def inventory(self):
         pass
+
     def attack(self):
         print(f"The {self.name} attacks for {self.attack_damage} damage")
         
@@ -75,12 +77,12 @@ class Spaceship:
     def __init__(self):
         self.current_room = "Generator Room"
         self.rooms = {
-            "Flight Deck": Room("Flight Deck", "You are on the flight deck."),
-            "Generator Room": Room("Generator Room", "You are in the generator room."),
-            "Storage": Room("Storage", "You are in the storage room."),
-            "Cafeteria": Room("Cafeteria", "You are in the cafeteria."),
-            "Master Chamber": Room("Master Chamber", "You have entered the master chamber"),
-            "Living Quarters": Room("Living Quarters","This is where you and your crew slept.")
+            "Flight Deck": Room("Flight Deck", "\nYou are on the flight deck.\n"),
+            "Generator Room": Room("Generator Room", "\nYou are in the generator room.\n"),
+            "Storage": Room("Storage", "\nYou are in the storage room.\n"),
+            "Cafeteria": Room("Cafeteria", "\nYou are in the cafeteria.\n"),
+            "Master Chamber": Room("Master Chamber", "\nYou have entered the master chamber.\n"),
+            "Living Quarters": Room("Living Quarters","\nThis is where you and your crew slept.\n")
         }
         self.rooms["Flight Deck"].doors["south"] = "Cafeteria"
         self.rooms["Cafeteria"].doors["south"] = "Living Quarters"
@@ -126,8 +128,9 @@ def Fuse():
             time.sleep(2)
             print("The Captain's Log said they were in the Master Chamber! We better hurry...\n")
             p.code = True
+            p.scare = True
             time.sleep(3)
-            print("As you turn to leave, you hear noises coming from the living quarters nearby.\n")
+            print("As you turn to leave, you hear noises coming from the living quarters nearby. Maybe a crew member?\n")
             time.sleep(4)
 
             pass
@@ -204,13 +207,19 @@ def driver():
             pass
         #This is where the player first encounters the Geashes after receiving the code
         if spaceship.current_room == "Living Quarters":
-            if p.code == True:
+            if p.scare == True:
                 time.sleep(3)
-                print("\nGEASHES!!\n")
+                print("\nAs you enter the Living Quarters, you realise that wasn't a crewmate, but rather the geashes that the captain warned about!\n")
+                time.sleep(2)
+                print("The geashes staggers back and climbs up the wall and into the open vent in the ceiling.")
+                p.scare = False
+
             pass
         #This is where the player enters the code and receives the HiMagNetic7000
         if spaceship.current_room == "Master Chamber":
-            #if p.lights == True:
+            if p.code == True:
+                print("FIND DA WEAPON")
+
             #if p.lights == False:
                 #pass
             pass
