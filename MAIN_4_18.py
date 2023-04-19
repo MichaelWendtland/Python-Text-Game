@@ -145,11 +145,17 @@ def Fuse():
         Fuse()
     pass
 
-#Init player as p
+#Init class player as p
 p = player()
+
+#Init Class Spaceship as spaceship
 spaceship = Spaceship()
+
+#Main driver code:
 def driver():
+    #establish p.name with player name input
     p.name = input("What is your character's name? ")
+    #welcome player to game, show starting room name, begin intro dialog
     print('\n', "Welcome to the game" , p.name , '\n')
     print(spaceship.rooms[spaceship.current_room].description)
     time.sleep(2)
@@ -157,15 +163,19 @@ def driver():
     time.sleep(2)
     print("You get up and yell for help to no avail, it seems like you're the only one left on this ship.\n")
     print("--------------------------------------")
+    #Establish the map and starting pos
     while True:
+        #Locate the room, and depending on the p.*args: play coresponding dialog/functions
         if spaceship.current_room == "Flight Deck":
             #if p.weapon == False:
             #if p.weapon == True:
             pass
 
         if spaceship.current_room == "Cafeteria":
+            #if captains log has been read, skip reading the log text again
             if p.caplog ==True:
                 pass
+            #if the lights have been turned on, Player receives captains log, play captains log text
             elif p.lights == True:
                 p.caplog = True
                 time.sleep(1)
@@ -187,26 +197,27 @@ def driver():
                 time.sleep(3)
                 print('"...after a geashes destroyed the terminal,\nI had to store our weapons in the master chamber with the rest of the crew to prevent it from destroying them"\n')
                 time.sleep(4)
-                print('"if anyone from the outside is reading this PLEASE SAVE US! YOURE NOT ALONE!"\n')
+                print('"If anyone from the outside is reading this PLEASE SAVE US! YOURE NOT ALONE!"\n')
                 time.sleep(4)
                 print('“The code to save us can be found in the storage closet, please move with haste as we wont have much time!”\n')
             pass
-    
+        #This is where the player first encounters the Geashes after receiving the code
         if spaceship.current_room == "Living Quarters":
             if p.code == True:
                 time.sleep(3)
                 print("\nGEASHES!!\n")
             pass
-    
+        #This is where the player enters the code and receives the HiMagNetic7000
         if spaceship.current_room == "Master Chamber":
             #if p.lights == True:
             #if p.lights == False:
                 #pass
             pass
-    
+        #This is where the player starts the game and where the fuse will be returned to
         if spaceship.current_room == "Generator Room":
             if p.lights ==True:
                 pass
+            #Read if the player has not acquired the fuse
             elif p.fuse == False:
                 time.sleep(3)
                 print("\nYou look around and in the dim light, you notice something on the wall.\n")
@@ -215,6 +226,7 @@ def driver():
                 time.sleep(2)
                 print("Luckily you remember there are extras in the storage room.\n")
                 pass
+            #Read if the player has found the fuse
             elif p.fuse == True:
                 p.lights = True
                 print("\nAs you walk into the generator room you find the fuse panel and place the fuse you found inside the slot.\n")
@@ -226,26 +238,30 @@ def driver():
                 print("It may be a good time to get familiar with the ship.\n")
                 pass
             pass
-    
+        #This is where the player finds the fuse and the code (Includes simple shelf search function Fuse())
         if spaceship.current_room == "Storage":
+            #If the code has already been found skip dialog
             if p.code == True:
                 pass
+            #If the player has not found the fuse, start Fuse() to search shelves (dialog = fuse)
             elif p.fuse == False:
                 time.sleep(1)
                 print("\nThere are shelves in here that contain various items. \n")
                 time.sleep(1)
                 print("You decide to search the shelves.\n")
                 Fuse()
+            #If the player has found the captains log, start Fuse() to search for the code
             elif p.caplog == True:
                 print("\nYou could have sworn you checked all the shelves...\n")
                 Fuse()
 
             pass
-
+        #Print the available movement after the player has received any dialog/items
         print(spaceship.available_directions())
         direction = input("Enter direction or 'exit' to quit: ").lower()
-
+        #If the player would like to quit at any time:
         if direction == "exit":
+            #Play the "GAME OVER" large print
             go()
             break
         spaceship.navigate(direction)
