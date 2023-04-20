@@ -120,7 +120,12 @@ def Fuse():
     x = input("Search Options: top, middle, or bottom shelf?: ").lower()
     time.sleep(1)
     if x == "bottom":
-        if p.caplog == True:
+        if p.weapon == True:
+            time.sleep(2)
+            print("There's nothing left on the bottom shelf.")
+            Fuse()
+            pass
+        elif p.caplog == True:
             print("\nAs you look again, you notice a small piece of paper near the shelf that you didn't see before.\n")
             time.sleep(3)
             print("On the paper is written: 85290184\n")
@@ -133,7 +138,6 @@ def Fuse():
             time.sleep(3)
             print("As you turn to leave, you hear noises coming from the living quarters nearby. Maybe a crew member?\n")
             time.sleep(4)
-
             pass
         elif p.caplog == False:
             p.fuse = True
@@ -145,6 +149,7 @@ def Fuse():
     elif x == "top":
         if p.weapon == True:
             print("\n You have found the CPU!\n ")
+            p.cpu = True
             pass
         elif p.weapon == False:
             print("\nYou found nothing but a dusty shelf, and some sort of computer part.\n")
@@ -237,7 +242,9 @@ def driver():
 
         #This is where the player enters the code and receives the HiMagNetic7000
         if spaceship.current_room == "Master Chamber":
-            if p.code == True:
+            if p.weapon ==True:
+                pass
+            elif p.code == True:
                 time.sleep(2)
                 print("\nYou finally have made it to the master chamber, you look at the crumpled up note with the 8 digit code on it.\n")
                 time.sleep(2)
