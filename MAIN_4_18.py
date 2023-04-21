@@ -193,7 +193,7 @@ def driver():
                 geashes = geashesMonster ("Geashes", 10, 10)
                 print("Geashes appears infront of you!")
                 print("options: Use HiMagNetic7000")
-                userinput = input("Type HiMagNetic7000")
+                userinput = input('"Type HiMagNetic7000"\n')
                 if userinput == "HiMagNetic7000":
                     print("You use your HiMagNetic7000 and deal 10 dammage")
                     geashes.take_damage(10)
