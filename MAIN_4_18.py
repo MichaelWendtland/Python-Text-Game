@@ -185,7 +185,20 @@ def driver():
             if p.cpu == True:
                 print("\nFLIGHT CONTROLS NOW ACTIVE\n")
                 time.sleep(2)
-                print("THIS THE MOTHERSHIP, WE ARE COMING IN HOT BABY! \n\n WATCH UR TAIL! THE GEASHES ARE MEANY HEADS\n")
+                print("You Ready the Controls and seal all doors, you look at the flight computer and type in the location of the Mother Ship.")
+                time.sleep(4)
+                print("after the flight computer processed your request. you hear the engines start to whir up")
+                time.sleep(4)
+                print("you have managed to survive dispite all odd's now you are on your way back to safety")
+                time.sleep(5)
+                print("Thanks for Playing!")
+                time.sleep(3)
+                print(" _____   ___  ___  ___ _____   _____  _   _ ___________ \n"
+                      "|  __ \ / _ \ |  \/  ||  ___| |  _  || | | |  ___| ___ \ \n"
+                      "| |  \// /_\ \| .  . || |__   | | | || | | | |__ | |_/ /\n"
+                      "| | __ |  _  || |\/| ||  __|  | | | || | | |  __||    / \n"
+                      "| |_\ \| | | || |  | || |___  \ \_/ /\ \_/ / |___| |\ \ \n"
+                      " \____/\_| |_/\_|  |_/\____/   \___/  \___/\____/\_| \_|\n")
             pass
 
         if spaceship.current_room == "Cafeteria":
