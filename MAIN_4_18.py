@@ -181,7 +181,8 @@ def driver():
     while True:
         #Locate the room, and depending on the p.*args: play coresponding dialog/functions
         if spaceship.current_room == "Flight Deck":
-            #if p.weapon == False:
+            if p.cpu == False:
+                print("you need to get the cpu from the storage")
             if p.cpu == True:
                 print("\nFLIGHT CONTROLS NOW ACTIVE\n")
                 time.sleep(2)
